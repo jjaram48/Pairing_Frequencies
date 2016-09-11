@@ -12,10 +12,10 @@ function freq_generate (){    // GENERATES THE SPECTRUM OF FREQUENCIES
   }
 }
 
-function calc_averages (){
+function calc_total_average (){
   var sum = 0;
   for( var i = 0; i < col.length; i++ ){
-      sum += parseInt( col[i], 10 ); //don't forget to add the base
+      sum += parseInt( col[i], 10 ); //don't forget to add the base 10
   }
   var avgs = sum/col.length;
     println(avgs);
@@ -28,5 +28,5 @@ background(0);
     stroke(col[i]);
     line( i, 0, i, height)
   }
-  calc_averages();
+  calc_total_average();
 }
